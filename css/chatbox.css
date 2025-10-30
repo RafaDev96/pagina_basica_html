@@ -1,0 +1,170 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Garante que o body não está com overflow estranho */
+  overflow-x: hidden; 
+}
+
+/* Botão flutuante 💬 */
+#chat-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: linear-gradient(135deg, #ff33cc, #6600ff);
+  color: white;
+  font-size: 26px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+  transition: transform 0.3s;
+  z-index: 9999;
+}
+
+#chat-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Caixa de chat lateral */
+.chatbox {
+  position: fixed;
+  
+  /* REMOVIDO: top: 60%; */
+  /* REMOVIDO: transform: translateY(-50%); */
+  
+  bottom: 80px; /* Posição acima do botão flutuante */
+  right: 20px;
+  
+  /* DIMENSÕES FIXAS PARA NÃO COBRIR A TELA */
+  width: 295px; 
+  height: 390px;
+  
+  /* O resto do estilo */
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #ff33cc;
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  color: white;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+  animation: slideIn 0.4s ease;
+}
+
+/* Animação suave */
+@keyframes slideIn {
+  from {
+    bottom: 0px; /* Começa ligeiramente abaixo da posição final */
+    opacity: 0;
+  }
+  to {
+    bottom: 80px; /* Termina na posição final */
+    opacity: 1;
+  }
+}
+
+
+.chatbox.open {
+  display: flex;
+}
+
+/* Cabeçalho */
+.chatbox-header {
+  background: linear-gradient(90deg, #ff33cc, #6600ff);
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.chatbox-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Mensagens */
+.chatbox-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.message {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.message.bot b {
+  color: #ff99ff;
+}
+.message.user {
+  color: #99ff99;
+  text-align: right;
+}
+
+/* Emojis */
+.chatbox-emojis {
+  border-top: 1px solid #ff33cc;
+  border-bottom: 1px solid #ff33cc;
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Campo de texto */
+.chatbox-input {
+  display: flex;
+  border-top: 1px solid #ff33cc;
+}
+
+.chatbox-input input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  background: #222;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.chatbox-input button {
+  background: #ff33cc;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chatbox-input button:hover {
+  background: #ff66ff;
+}
+
+/* Animação suave */
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
