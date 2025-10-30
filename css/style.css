@@ -82,3 +82,53 @@ a:hover {
   z-index: 9998;        /* um pouco abaixo do chat */
 }
 
+/* 1. ESTILIZAÇÃO DO FUNDO (COBRE A TELA TODA E CENTRALIZA) */
+.modal-fundo {
+    /* Faz o modal cobrir 100% da tela */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Fundo semi-transparente para dar o efeito modal */
+    background-color: rgba(0, 0, 0, 0.75); 
+    
+    /* Mantém o modal acima de todos os outros elementos */
+    z-index: 9999; 
+    
+    /* Centralização Mágica com Flexbox */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */
+    
+    /* Garante que o modal esteja inicialmente visível */
+    display: flex; 
+}
+
+/* 2. ESTILIZAÇÃO DO CONTEÚDO (A CAIXA CENTRAL) */
+.modal-conteudo {
+    background-color: #eb2c2c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 400px; /* Limita a largura para não ser muito grande */
+    text-align: center;
+}
+
+/* 3. ESTILIZAÇÃO DO BOTÃO */
+#btn-iniciar-video {
+    background-color: #c0b2b2; /* Vermelho YouTube */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+#btn-iniciar-video:hover {
+    background-color: #CC0000;
+}

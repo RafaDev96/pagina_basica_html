@@ -30,15 +30,23 @@
   allowtransparency="false">
 </iframe>
 
-<!-- Vídeo lateral fixo -->
+<div id="popup-interacao" class="modal-fundo">
+    <div class="modal-conteudo">
+        <h3>🎉 Obrigado por acessar o meu Site</h3>
+        <p>Clique aqui para prosseguir</p>
+        <button id="btn-iniciar-video">Continuar</button>
+    </div>
+</div>
+
 <iframe 
-  id="side-video"
-  src="https://www.youtube.com/embed/xAR6N9N8e6U?si=-AlkQZEd0pOaCCTh"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
+  id="side-video" 
+  src="https://www.youtube.com/embed/xAR6N9N8e6U?enablejsapi=1&version=3&playerapiid=ytplayer" 
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
   allowfullscreen>
 </iframe>
 
+<script src="components/video_autoplay.js"></script>
 
 <script>
   async function loadHTML(url, containerId) {
