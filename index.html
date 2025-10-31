@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primeira página web</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Bem-vindo à Página</h1>
+  <p>Essa é uma página básica em HTML.</p>
+  <a href="saiba_mais.html">Saiba Mais</a>
+  <a href="site_qi.html">Site da QI</a>
+  <a href="quem_sou.html">Quem Sou</a>
+  <a href="https://www.google.com/webhp?hl=pt-BR&sa=X&ved=0ahUKEwj83u-9wrqQAxV5JLkGHYaOFeAQPAgI" targer="_blank">
+    <img src="images/demon-slayer-gif.gif" alt="Demon Slayer" style="width: 200px; height: auto; cursor:pointer;">
+    </a>
+
+
+<!-- Para o formulário -->
+<div id="form-container">
+  <!-- Você pode usar um servidor para incluir o arquivo, ou copiar o conteúdo diretamente -->
+  <!-- Se usar frameworks pode importar, mas no HTML puro precisa copiar ou usar AJAX para carregar -->
+</div>
+
+<iframe 
+  src="chatbox.html"
+  id="chatbox"
+  frameborder="0"
+  allowtransparency="false">
+</iframe>
+
+<div id="popup-interacao" class="modal-fundo">
+    <div class="modal-conteudo">
+        <h3>🎉 Obrigado por acessar o meu Site</h3>
+        <p>Clique aqui para prosseguir</p>
+        <button id="btn-iniciar-video">Continuar</button>
+    </div>
+</div>
+
+<iframe 
+  id="side-video" 
+  src="https://www.youtube.com/embed/xAR6N9N8e6U?enablejsapi=1&version=3&playerapiid=ytplayer" 
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
+  allowfullscreen>
+</iframe>
+
+<script src="components/video_autoplay.js"></script>
+
+<script>
+  async function loadHTML(url, containerId) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Erro ao carregar ' + url);
+      const html = await response.text();
+      document.getElementById(containerId).innerHTML = html;
+    } catch (e) {
+      console.error(e);
+    }
+
+  }
+
+</script>
+</body>
+</html>
