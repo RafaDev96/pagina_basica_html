@@ -132,3 +132,24 @@ a:hover {
 #btn-iniciar-video:hover {
     background-color: #CC0000;
 }
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;   /* distância da borda inferior */
+  right: 350px;    /* distância da borda direita */
+  z-index: 1000;  /* garante que fique por cima de outros elementos */
+  display: block;
+}
+
+.whatsapp-button img {
+  width: 60px;    /* tamanho do botão */
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-button img:hover {
+  transform: scale(1.1); /* efeito ao passar o mouse */
+}
