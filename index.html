@@ -26,10 +26,13 @@
 
 
 <!-- Para o formulário -->
-<div id="form-container">
-  <!-- Você pode usar um servidor para incluir o arquivo, ou copiar o conteúdo diretamente -->
-  <!-- Se usar frameworks pode importar, mas no HTML puro precisa copiar ou usar AJAX para carregar -->
-</div>
+<div id="form-container"></div>
+<script>
+  fetch('formulario.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('form-container').innerHTML = html);
+</script>
+
 
 <iframe 
   src="chatbox.html"
