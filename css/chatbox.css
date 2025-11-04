@@ -168,3 +168,16 @@ body, html {
     opacity: 1;
   }
 }
+
+/* Exemplo de CSS para destacar o nome */
+.message-user-name {
+    font-weight: bold; /* Já é bold com <strong>, mas garante */
+    color: #333; /* Cor escura para o nome */
+    margin-right: 5px; /* Espaço entre o nome e o texto */
+}
+
+.message.user {
+    /* Mantenha sua estilização atual para a bolha da mensagem */
+    text-align: right; 
+    /* etc. */
+}

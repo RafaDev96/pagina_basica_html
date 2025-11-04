@@ -8,7 +8,7 @@ const MODAL_VISTO_KEY = 'modalVideoVisto'; // Chave para o LocalStorage
 // Você pode mudar este valor para o que preferir:
 // Exemplo: 1 hora: 60 * 60 * 1000
 // Exemplo: 5 minutos: 5 * 60 * 1000
-const MODAL_EXPIRATION_MS = 25 * 60 * 1000; // 25 minutos
+const MODAL_EXPIRATION_MS = 5 * 1000; // 25 minutos
 
 
 // ===============================================
