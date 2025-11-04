@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Demon Slayer Avançado</title>
+  <link rel="stylesheet" href="css/form-demonslayer-advanced.css">
+</head>
+<body>
+  <div class="ds-advanced-container">
+    <form class="ds-advanced-form">
+      <h2>Contato Demon Slayer 🔥</h2>
+
+      <label for="nome">Nome</label>
+      <input id="nome" type="text" placeholder="Digite seu nome">
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Digite seu email">
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" placeholder="Sua mensagem..."></textarea>
+
+      <button type="submit">Enviar ⚔️</button>
+    </form>
+  </div>
+  <script>
+  function sendHeight() {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage(height, '*');
+  }
+  window.onload = sendHeight;
+  window.onresize = sendHeight;
+</script>
+
+</body>
+</html>

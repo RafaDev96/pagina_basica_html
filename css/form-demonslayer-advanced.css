@@ -1,0 +1,141 @@
+/* Fundo com padrão geométrico do kimono do Tanjiro */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0d0d0d, #1a1a1a);
+  color: #fff;
+}
+
+.ds-advanced-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 160vh;
+  padding: 20px;
+}
+
+/* Formulário com bordas e gradiente */
+.ds-advanced-form {
+  /* Se quiser o estilo Demon Slayer mas sem borda preta extra, ajuste */
+  border: none; /* remove a borda vermelha se não quiser */
+  box-shadow: none; /* remove sombra escura externa */
+  background: linear-gradient(135deg, #1f1f1f 0%, #2b2b2b 100%);
+  border-radius: 25px; /* mantém cantos arredondados se quiser */
+}
+
+/* Adiciona padrões inspirados no kimono */
+.ds-advanced-form::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(230, 57, 70, 0.1),
+    rgba(230, 57, 70, 0.1) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  transform: rotate(25deg);
+  z-index: 0;
+}
+
+.ds-advanced-form * {
+  position: relative;
+  z-index: 1;
+}
+
+.ds-advanced-form h2 {
+  text-align: center;
+  color: #e63946;
+  margin-bottom: 25px;
+  font-size: 2em;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px #000;
+}
+
+/* Labels */
+.ds-advanced-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #f1faee;
+  text-shadow: 1px 1px #000;
+}
+
+/* Inputs e textarea com gradiente interno */
+.ds-advanced-form input,
+.ds-advanced-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 2px solid #e63946;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #2b2b2b, #1f1f1f);
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(230,57,70,0.5);
+}
+
+/* Focus nos campos */
+.ds-advanced-form input:focus,
+.ds-advanced-form textarea:focus {
+  border-color: #f1faee;
+  box-shadow: 0 0 15px rgba(230,57,70,0.8);
+  background: #2f2f2f;
+}
+
+/* Botão com efeito flamejante */
+.ds-advanced-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #e63946, #d90429);
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(230,57,70,0.5);
+}
+
+.ds-advanced-form button:hover {
+  background: linear-gradient(135deg, #d90429, #b22222);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(230,57,70,0.7);
+}
+
+/* Textarea ajustável */
+.ds-advanced-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Adiciona animação suave de entrada dos campos */
+.ds-advanced-form input,
+.ds-advanced-form textarea,
+.ds-advanced-form button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.ds-advanced-form input:nth-child(2),
+.ds-advanced-form input:nth-child(4),
+.ds-advanced-form textarea:nth-child(6),
+.ds-advanced-form button {
+  animation-delay: 0.1s, 0.2s, 0.3s, 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

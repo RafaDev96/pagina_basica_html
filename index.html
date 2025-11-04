@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Primeira página web</title>
   <link rel="stylesheet" href="css/style.css" />
+
 </head>
 <body>
   <h1>Bem-vindo à Página</h1>
@@ -26,12 +27,14 @@
 
 
 <!-- Para o formulário -->
-<div id="form-container"></div>
-<script>
-  fetch('formulario.html')
-    .then(r => r.text())
-    .then(html => document.getElementById('form-container').innerHTML = html);
-</script>
+<section class="landing-form-section">
+  <div class="form-wrapper">
+    <iframe src="form-demonslayer-advanced.html"
+            style="width:100%; max-width:450px; height:550px; border:none; overflow:hidden;">
+    </iframe>
+  </div>
+</section>
+
 
 
 <iframe 
@@ -73,5 +76,6 @@
   }
 
 </script>
+
 </body>
 </html>

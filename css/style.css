@@ -137,7 +137,7 @@ a:hover {
 .whatsapp-button {
   position: fixed;
   bottom: 20px;   /* distância da borda inferior */
-  right: 350px;    /* distância da borda direita */
+  right: 300px;    /* distância da borda direita */
   z-index: 1000;  /* garante que fique por cima de outros elementos */
   display: block;
 }
