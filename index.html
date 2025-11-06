@@ -10,9 +10,15 @@
 <body>
   <h1>Bem-vindo à Página</h1>
   <p>Essa é uma página básica em HTML.</p>
-  <a href="saiba_mais.html">Saiba Mais</a>
-  <a href="site_qi.html">Site da QI</a>
-  <a href="quem_sou.html">Quem Sou</a>
+  <nav class="menu-container">
+    <button id="menu-toggle" class="menu-btn">☰ Menu</button>
+    <ul class="menu">
+      <li><a href="saiba_mais.html">Saiba Mais</a></li>
+      <li><a href="site_qi.html">Site da QI</a></li>
+      <li><a href="quem_sou.html">Quem Sou</a></li>
+  </ul>
+</nav>
+
   <a href="https://www.google.com/webhp?hl=pt-BR&sa=X&ved=0ahUKEwj83u-9wrqQAxV5JLkGHYaOFeAQPAgI" target="_blank">
     <img src="images/demon-slayer-gif.gif" alt="Demon Slayer" style="width: 200px; height: auto; cursor:pointer;">
     </a>
@@ -75,6 +81,14 @@
 
   }
 
+</script>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
 </script>
 
 </body>
