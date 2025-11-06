@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Primeira página web</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 
 </head>
 <body>
@@ -57,15 +58,15 @@
         <button id="btn-iniciar-video">Continuar</button>
     </div>
 </div>
-
-<iframe 
-  id="side-video" 
-  src="https://www.youtube.com/embed/xAR6N9N8e6U?enablejsapi=1&version=3&playerapiid=ytplayer" 
-  frameborder="0" 
-  allow="autoplay; encrypted-media" 
-  allowfullscreen>
-</iframe>
-
+<div class="video-container">
+  <iframe 
+    id="side-video" 
+    src="https://www.youtube.com/embed/xAR6N9N8e6U?enablejsapi=1&version=3&playerapiid=ytplayer" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen>
+  </iframe>
+</div>
 <script src="components/video_autoplay.js"></script>
 
 <script>
@@ -90,6 +91,8 @@
     menu.classList.toggle('active');
   });
 </script>
+
+<script src="css/responsive.css"></script>
 
 </body>
 </html>

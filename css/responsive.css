@@ -1,0 +1,97 @@
+/* ===== Estilo exclusivo para celulares (Max-width: 480px) ===== */
+@media (max-width: 480px) {
+    
+    /* === Regras Gerais === */
+    body {
+        padding: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* === Regras de Menu === */
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-btn {
+        width: 80%;
+        max-width: 280px;
+        margin-bottom: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu a {
+        width: 100%;
+        max-width: 300px;
+        font-size: 1rem;
+    }
+
+    /* 🛑 REGRAS DE OCULTAÇÃO DO PLAYER (Aplicadas ao IFRAME e ao Container) 🛑 */
+
+    /* Regras para o IFRAME (#side-video) - Anula o position: fixed e dimensões */
+    #side-video {
+        position: absolute !important; 
+        left: -9999px !important; 
+        top: -9999px !important;
+        
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        
+        /* Anula as propriedades de fixed do CSS base */
+        bottom: auto !important;
+        z-index: 1 !important; 
+        border: none !important;
+        box-shadow: none !important;
+        
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    /* Regras para o Container (.video-container) - Garantia de que o wrapper não aparece */
+    .video-container {
+        /* Garante que o container siga o iframe */
+        position: absolute !important; 
+        left: -9999px !important; 
+        top: -9999px !important;
+        
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        
+        margin: 0 !important; 
+        order: initial !important; 
+        display: block !important;
+    }
+
+    /* As regras de iframe dentro do container não são mais necessárias */
+    /* Elas são substituídas pelas regras diretas no #side-video */
+    .video-container iframe {
+        /* Estas regras serão ignoradas pelo seletor #side-video mais forte */
+        width: 100% !important;
+        height: 100% !important; 
+        aspect-ratio: 16 / 9 !important; 
+        border-radius: 10px !important;
+    }
+
+    /* === Regras dos Botões (Z-Index) === */
+    .whatsapp-btn, .chat-btn {
+        position: fixed !important;
+        z-index: 1000 !important; 
+    }
+    
+} /* <- FIM CORRETO DO @MEDIA */
